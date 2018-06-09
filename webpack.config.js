@@ -18,7 +18,8 @@ module.exports = env => {
             template: path.resolve(__dirname, './index.html')
         })
     ]
-    if (process.env.NODE_ENV === 'production') {
+    // if (process.env.NODE_ENV === 'production') {
+        // console.log(1)
         plugins.push(
             new extractTextWebpackPlugin('stylee.css'),
             new webpack.DefinePlugin({
@@ -26,14 +27,14 @@ module.exports = env => {
                     NODE_ENV: '"production"'
                 }
             }),
-            new webpack.optimize.UglifyJsPlugin({
-                sourceMap: true,
-                compress: {
-                    warnings: false
-                }
-            }),
+            // new webpack.optimize.UglifyJsPlugin({
+            //     sourceMap: false,
+            //     compress: {
+            //         warnings: false
+            //     }
+            // }),
         )
-    }
+    // }
 
     return {
         entry: {
@@ -117,12 +118,6 @@ module.exports = env => {
                 errors: true
             },
             hot: true
-        },
-        resolve: {
-            // extensions: ['.js', '.vue'],
-            alias: {
-                'css$': resolve('src/css/')
-            }
         },
         plugins,
         devtool: '#cheap-module-source-map'

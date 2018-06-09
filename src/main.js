@@ -1,3 +1,4 @@
+// import './js/hotcss1.js'
 import './css/reset.css'
 import 'babel-polyfill'
 import fastclick from 'fastclick'

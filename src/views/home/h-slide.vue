@@ -29,7 +29,6 @@
                         el: '.swiper-pagination'
                     }
                 },
-                //轮播图
                 items: [
                     {
                         href: 'home',
