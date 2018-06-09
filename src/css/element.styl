@@ -1,0 +1,20 @@
+
+
+@import './layout.styl'
+
+list($dirction = column)
+    flex($dirction)
+
+
+panel($bg-color = #fff, $padding = 0px, $margin = 20px 0, $height = 112px, $textPadding = 0 32px, $color = #333, $fontSize = 32px)
+    background-color $bg-color
+    padding $padding
+    margin $margin
+    >h4
+        height $height
+        color $color
+        line-height $height
+        padding $textPadding
+        nowrap()
+        text-align center
+        font-size $fontSize
